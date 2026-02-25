@@ -28,12 +28,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Fraction display never shows a denominator above 32 (e.g., no 13/64" or 31/64")
   4. The input parser accepts "1 3/4", "1-3/4", "3/4", "0.75", and "3" and rejects non-numeric input
   5. The engine emits a warning flag when any interior pin width falls below 3/16"
-**Plans**: TBD
+**Plans:** 3 plans
 
 Plans:
-- [ ] 01-01: Scaffold Vite + React + TypeScript + Tailwind project and configure Vitest
-- [ ] 01-02: Build calculator.ts (geometry engine) and formatter.ts (decimal-to-fraction) with Vitest test suite
-- [ ] 01-03: Build inputParser.ts (imperial fraction string parser) with Vitest test suite
+- [ ] 01-01-PLAN.md — Scaffold Vite + React + TypeScript project, install fraction.js and Vitest, create shared types
+- [ ] 01-02-PLAN.md — TDD: Build calculator.ts (geometry engine) and formatter.ts (decimal-to-fraction with 1/32" snap)
+- [ ] 01-03-PLAN.md — TDD: Build inputParser.ts (imperial fraction string parser with all 5 input formats)
 
 ### Phase 2: UI Layer
 **Goal**: A working calculator in the browser — all inputs wired to the engine, fractional output displayed reactively by board section, usable at a workshop bench
