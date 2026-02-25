@@ -31,7 +31,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans:** 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Scaffold Vite + React + TypeScript project, install fraction.js and Vitest, create shared types
+- [x] 01-01-PLAN.md — Scaffold Vite + React + TypeScript project, install fraction.js and Vitest, create shared types
 - [ ] 01-02-PLAN.md — TDD: Build calculator.ts (geometry engine) and formatter.ts (decimal-to-fraction with 1/32" snap)
 - [ ] 01-03-PLAN.md — TDD: Build inputParser.ts (imperial fraction string parser with all 5 input formats)
 
@@ -72,6 +72,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Calculation Engine | 0/3 | Not started | - |
+| 1. Calculation Engine | 1/3 | In progress | - |
 | 2. UI Layer | 0/2 | Not started | - |
 | 3. Polish and Deploy | 0/2 | Not started | - |

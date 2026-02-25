@@ -11,8 +11,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [ ] **INP-01**: User can enter board width in imperial inches (fractional input accepted, e.g., "6 3/4")
 - [ ] **INP-02**: User can enter board thickness in imperial inches (fractional input accepted)
-- [ ] **INP-03**: User can select wood species type (hardwood / softwood) which sets default dovetail angle
-- [ ] **INP-04**: User can override the dovetail angle/ratio if the species default doesn't suit
+- [x] **INP-03**: User can select wood species type (hardwood / softwood) which sets default dovetail angle
+- [x] **INP-04**: User can override the dovetail angle/ratio if the species default doesn't suit
 - [ ] **INP-05**: User can override the auto-recommended pin count
 
 ### Calculation
@@ -22,7 +22,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **CALC-03**: Calculator computes pin width (narrowest point) in fractional imperial
 - [ ] **CALC-04**: Calculator computes half-pin width in fractional imperial
 - [ ] **CALC-05**: Calculator computes tail depth (equals board thickness) in fractional imperial
-- [ ] **CALC-06**: Calculator uses correct angle from ratio (1:6 hardwood = atan(1/6), 1:8 softwood = atan(1/8))
+- [x] **CALC-06**: Calculator uses correct angle from ratio (1:6 hardwood = atan(1/6), 1:8 softwood = atan(1/8))
 - [ ] **CALC-07**: Calculator warns when pin width falls below 3/16" (structurally weak)
 
 ### Display
@@ -79,15 +79,15 @@ Which phases cover which requirements. Updated during roadmap creation.
 |-------------|-------|--------|
 | INP-01 | Phase 1 | Pending |
 | INP-02 | Phase 1 | Pending |
-| INP-03 | Phase 1 | Pending |
-| INP-04 | Phase 1 | Pending |
+| INP-03 | Phase 1 | Complete (01-01) |
+| INP-04 | Phase 1 | Complete (01-01) |
 | INP-05 | Phase 1 | Pending |
 | CALC-01 | Phase 1 | Pending |
 | CALC-02 | Phase 1 | Pending |
 | CALC-03 | Phase 1 | Pending |
 | CALC-04 | Phase 1 | Pending |
 | CALC-05 | Phase 1 | Pending |
-| CALC-06 | Phase 1 | Pending |
+| CALC-06 | Phase 1 | Complete (01-01) |
 | CALC-07 | Phase 1 | Pending |
 | DISP-01 | Phase 2 | Pending |
 | DISP-02 | Phase 2 | Pending |
@@ -104,4 +104,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-02-25*
-*Last updated: 2026-02-25 after roadmap creation*
+*Last updated: 2026-02-25 after plan 01-01 completion (INP-03, INP-04, CALC-06 complete)*

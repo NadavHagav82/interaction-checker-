@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-25)
 ## Current Position
 
 Phase: 1 of 3 (Calculation Engine)
-Plan: 0 of 3 in current phase
-Status: Ready to plan
-Last activity: 2026-02-25 — Roadmap created, phases derived from requirements
+Plan: 1 of 3 in current phase
+Status: In progress
+Last activity: 2026-02-25 — Plan 01-01 complete: project scaffold and shared types
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [█░░░░░░░░░] 11%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 0
-- Average duration: -
-- Total execution time: 0 hours
+- Total plans completed: 1
+- Average duration: 4 min
+- Total execution time: 0.07 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| 01-calculation-engine | 1 | 4 min | 4 min |
 
 **Recent Trend:**
-- Last 5 plans: none yet
-- Trend: -
+- Last 5 plans: 01-01 (4 min)
+- Trend: baseline established
 
 *Updated after each plan completion*
 
@@ -45,6 +45,9 @@ Recent decisions affecting current work:
 - [Roadmap]: Math-before-UI ordering — all 5 critical pitfalls (floating-point fraction corruption, invalid pin layout, mobile input, fraction precision, angle convention) are in the calculation layer; engine must be verified in isolation before any UI is built
 - [Roadmap]: fraction.js as arithmetic backend, wrapped in custom toFraction32() that enforces 1/32" grid — resolves tension between STACK.md and PITFALLS.md recommendations
 - [Roadmap]: No separate scaffold phase — `npm create vite@latest` is one command, not a phase; included as first plan within Phase 1
+- [01-01]: passWithNoTests: true added to Vitest config — Vitest 4 exits code 1 with no test files; flag enables clean exit during scaffold before any tests exist
+- [01-01]: DovetailResult.pinWidth represents narrowest point (baseline) not face width — matches woodworking measurement convention per PITFALLS.md
+- [01-01]: angle field in DovetailResult is radians from Math.atan(1/ratio) — JSDoc enforces derivation pattern to prevent hardcoded-degree pitfall (CALC-06)
 
 ### Pending Todos
 
@@ -58,5 +61,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-25
-Stopped at: Roadmap created, STATE.md initialized — ready to plan Phase 1
+Stopped at: Completed 01-01-PLAN.md — scaffold and shared types done; ready for Plan 02 (calculator + formatter)
 Resume file: None
