@@ -9,8 +9,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Input
 
-- [ ] **INP-01**: User can enter board width in imperial inches (fractional input accepted, e.g., "6 3/4")
-- [ ] **INP-02**: User can enter board thickness in imperial inches (fractional input accepted)
+- [x] **INP-01**: User can enter board width in imperial inches (fractional input accepted, e.g., "6 3/4")
+- [x] **INP-02**: User can enter board thickness in imperial inches (fractional input accepted)
 - [x] **INP-03**: User can select wood species type (hardwood / softwood) which sets default dovetail angle
 - [x] **INP-04**: User can override the dovetail angle/ratio if the species default doesn't suit
 - [ ] **INP-05**: User can override the auto-recommended pin count
@@ -77,8 +77,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INP-01 | Phase 1 | Pending |
-| INP-02 | Phase 1 | Pending |
+| INP-01 | Phase 1 | Complete |
+| INP-02 | Phase 1 | Complete |
 | INP-03 | Phase 1 | Complete (01-01) |
 | INP-04 | Phase 1 | Complete (01-01) |
 | INP-05 | Phase 1 | Pending |

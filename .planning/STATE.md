@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-25)
 ## Current Position
 
 Phase: 1 of 3 (Calculation Engine)
-Plan: 1 of 3 in current phase
+Plan: 3 of 3 in current phase
 Status: In progress
-Last activity: 2026-02-25 — Plan 01-01 complete: project scaffold and shared types
+Last activity: 2026-02-25 — Plan 01-03 complete: imperial fraction input parser
 
-Progress: [█░░░░░░░░░] 11%
+Progress: [███░░░░░░░] 33%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 4 min
-- Total execution time: 0.07 hours
+- Total plans completed: 3
+- Average duration: 3 min
+- Total execution time: 0.13 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-calculation-engine | 1 | 4 min | 4 min |
+| 01-calculation-engine | 3 | 8 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (4 min)
-- Trend: baseline established
+- Last 5 plans: 01-01 (4 min), 01-02 (2 min), 01-03 (2 min)
+- Trend: improving — TDD plans faster than scaffold
 
 *Updated after each plan completion*
 
@@ -48,6 +48,9 @@ Recent decisions affecting current work:
 - [01-01]: passWithNoTests: true added to Vitest config — Vitest 4 exits code 1 with no test files; flag enables clean exit during scaffold before any tests exist
 - [01-01]: DovetailResult.pinWidth represents narrowest point (baseline) not face width — matches woodworking measurement convention per PITFALLS.md
 - [01-01]: angle field in DovetailResult is radians from Math.atan(1/ratio) — JSDoc enforces derivation pattern to prevent hardcoded-degree pitfall (CALC-06)
+- [01-03]: MIXED_NUMBER_RE uses [-\s] character class for both space and hyphen separators in one pattern — avoids two separate regexes for semantically identical format
+- [01-03]: Object.setPrototypeOf(this, ParseError.prototype) required in ParseError constructor for correct instanceof checks in ES5 transpilation
+- [01-03]: isValidMeasurement uses isFinite(value) && value > 0 — isFinite rejects both NaN and Infinity in single check
 
 ### Pending Todos
 
@@ -61,5 +64,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-25
-Stopped at: Completed 01-01-PLAN.md — scaffold and shared types done; ready for Plan 02 (calculator + formatter)
+Stopped at: Completed 01-03-PLAN.md — imperial fraction input parser done; all 3 Phase 1 plans complete
 Resume file: None
