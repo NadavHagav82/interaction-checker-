@@ -12,7 +12,7 @@ Three phases build a pure client-side dovetail calculator from the inside out: f
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Calculation Engine** - Pure TypeScript engine for dovetail geometry with fraction formatter and input parser, fully tested
+- [x] **Phase 1: Calculation Engine** - Pure TypeScript engine for dovetail geometry with fraction formatter and input parser, fully tested (completed 2026-02-25)
 - [ ] **Phase 2: UI Layer** - Reactive React interface wiring inputs to the engine with fractional imperial output display
 - [ ] **Phase 3: Polish and Deploy** - Cross-browser and mobile validation, then deployment to static hosting
 
@@ -28,7 +28,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Fraction display never shows a denominator above 32 (e.g., no 13/64" or 31/64")
   4. The input parser accepts "1 3/4", "1-3/4", "3/4", "0.75", and "3" and rejects non-numeric input
   5. The engine emits a warning flag when any interior pin width falls below 3/16"
-**Plans:** 2/3 plans executed
+**Plans:** 3/3 plans complete
 
 Plans:
 - [x] 01-01-PLAN.md — Scaffold Vite + React + TypeScript project, install fraction.js and Vitest, create shared types
@@ -72,6 +72,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Calculation Engine | 2/3 | In Progress|  |
+| 1. Calculation Engine | 3/3 | Complete   | 2026-02-25 |
 | 2. UI Layer | 0/2 | Not started | - |
 | 3. Polish and Deploy | 0/2 | Not started | - |

@@ -48,6 +48,9 @@ Recent decisions affecting current work:
 - [01-01]: passWithNoTests: true added to Vitest config — Vitest 4 exits code 1 with no test files; flag enables clean exit during scaffold before any tests exist
 - [01-01]: DovetailResult.pinWidth represents narrowest point (baseline) not face width — matches woodworking measurement convention per PITFALLS.md
 - [01-01]: angle field in DovetailResult is radians from Math.atan(1/ratio) — JSDoc enforces derivation pattern to prevent hardcoded-degree pitfall (CALC-06)
+- [01-02]: 3:2 tail-to-pin face ratio chosen as canonical auto-layout default — pinWide = boardWidth / (pinCount * 2.5), tailWide = boardWidth/pinCount - pinWide — validated against hand-calculated 6" softwood 3-tail case
+- [01-02]: Math.tan(Math.atan(1/ratio)) equals 1/ratio exactly — tanAngle computed once per call, no floating-point accumulation
+- [01-02]: snapTo32nds() must be called before new Fraction() — eliminates float noise that causes fraction.js to produce grotesque denominators
 - [01-03]: MIXED_NUMBER_RE uses [-\s] character class for both space and hyphen separators in one pattern — avoids two separate regexes for semantically identical format
 - [01-03]: Object.setPrototypeOf(this, ParseError.prototype) required in ParseError constructor for correct instanceof checks in ES5 transpilation
 - [01-03]: isValidMeasurement uses isFinite(value) && value > 0 — isFinite rejects both NaN and Infinity in single check
@@ -58,8 +61,9 @@ None yet.
 
 ### Blockers/Concerns
 
-- [Phase 1]: Exact dovetail geometry formula not fully canonicalized — must validate against at least one hand-calculated known-good layout (e.g., 6" board, softwood 1:8, 3 tails) before Phase 1 is complete
-- [Phase 1]: Fraction display precision (1/16" vs 1/32") should be confirmed before formatter is written; recommendation is 1/32"
+None — both Phase 1 blockers resolved by Plan 01-02:
+- [RESOLVED by 01-02]: Dovetail geometry formula canonicalized — 6" softwood 3-tail known-good case hand-verified and passing in tests
+- [RESOLVED by 01-02]: Fraction display precision confirmed at 1/32" — formatter.ts implements and tests this
 
 ## Session Continuity
 
